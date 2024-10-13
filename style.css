@@ -230,7 +230,7 @@ nav .navlist li a{
 }
 
 .home .slide1{
-    background-image: url(./assets/KN\ 18.jpg);
+    background-image: url(./assets/bg4.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -761,12 +761,12 @@ nav .navlist li a{
 
 .blog-container .box .image img{
     transition: var(--transition);
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 }
-
+/* 
 .blog-container .box:hover img{
     filter: grayscale(0);
-}
+} */
 
 .blog-container .tag{
     position: absolute;
@@ -1123,12 +1123,9 @@ footer{
         top: -15rem;
     }
 
-    .home .swiper-slide:first-child .content h1,
-    .home .swiper-slide:first-child .content p,
-    .home .swiper-slide:first-child .content form{
-        display: none;
+    .contact-container .right iframe{
+        padding-right: 56.25%;
     }
-
     
     .services-container,
     .experts-container,
@@ -1141,5 +1138,9 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .footer-container .logo img{
+        width: 400px;
     }
 }

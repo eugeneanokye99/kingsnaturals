@@ -21,6 +21,10 @@ var swiper = new Swiper(".home-swiper", {
   var swiper = new Swiper(".shop-swiper", {
     slidesPerView: 1,
     spaceBetween: 10,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       640: {
         slidesPerView: 2,
