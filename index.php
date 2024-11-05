@@ -1,42 +1,20 @@
+<?php
+    if (!isset($_COOKIE['uid'])) {
+        header("Location: src/register.php");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-    <title>KINGS NATURALS</title>
+    <?php include "metatags.php"; ?>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body id="homepage">
     <!---------------------- NAVBAR ------------------------------>
-    <nav>
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <div><span>kings</span></div>
-                <div>Naturals</div>
-            </a>
-            <ul class="navlist">
-                <li><a href="#home" class="active">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#services">services</a></li>
-                <li><a href="#shop">shop</a></li>
-                <li><a href="#blog">blog</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <div class="menu-btn">
-                    <span class="lnr lnr-menu"></span>
-                </div>
-                <span class="lnr lnr-heart"></span>
-                <span class="lnr lnr-cart"></span>
-            </div>
-        </div>
-    </nav>
+    <?php include "navbar.php"; ?>
 
     <!---------------------- HOME ------------------------------>
     <section class="home" id="home">
@@ -47,13 +25,7 @@
                     <div class="swiper-slide slide1">
                         <div class="content">
                             <h1>Ghana's best hair product</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labor
-                                e et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aut
-                                e irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi
-                                dent, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptatem eligendi maiores vero repudiandae et, inventore similique cumque ducimus eos.
                             </p>
                             <form action="" class="home-search">
                                 <input type="text" name="search" id="" placeholder="Search here">
@@ -67,7 +39,7 @@
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit in repudiandae possimus dolorem veritatis, eligendi ut dignissimos laborum soluta maxime.
                             </p>
                             <form action="" class="home-search">
-                                <input type="text" name="search" id="" placeholder="Search here">
+                                <input type="text" name="search" class="search" placeholder="Search here">
                                 <button type="submit" class="btn"><span class="lnr lnr-magnifier"></span></button>
                             </form>
                         </div>
@@ -78,7 +50,7 @@
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea earum recusandae iusto quod corporis temporibus quae ipsa quos laborum totam.
                             </p>
                             <form action="" class="home-search">
-                                <input type="text" name="search" id="" placeholder="Search here">
+                                <input type="text" name="search" class="search" placeholder="Search here">
                                 <button type="submit" class="btn"><span class="lnr lnr-magnifier"></span></button>
                             </form>
                         </div>
@@ -89,7 +61,7 @@
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel sed totam exercitationem similique voluptas, explicabo labore voluptate ipsa voluptatem architecto.
                             </p>
                             <form action="" class="home-search">
-                                <input type="text" name="search" id="" placeholder="Search here">
+                                <input type="text" name="search" class="search" placeholder="Search here">
                                 <button type="submit" class="btn"><span class="lnr lnr-magnifier"></span></button>
                             </form>
                         </div>
@@ -120,7 +92,7 @@
             </div>
             <div class="right">
                 <div class="image">
-                    <img src="assets/IMG-20241002-WA0009.jpg" alt="">
+                    <img src="assets/IMG-20241002-WA0009.jpg" alt="Kings Olive image">
                 </div>
             </div>
         </div>
@@ -134,7 +106,7 @@
         </div>
         <div class="container services-container">
             <div class="col">
-                <img src="assets/b1.jpg" alt="">
+                <img src="assets/b1.jpg" alt="services1">
                 <div class="info">
                     <h4>Daily Makeup</h4>
                     <ul>
@@ -433,86 +405,6 @@
         </div>
     </section>
 
-    <!---------------------- TESTIMONIALS ------------------------------>
-    <section class="testimonial">
-        <div class="container testimonial-container">
-            <div class="swiper mySwiper testimonial-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="quote">
-                            <img src="assets/quote.png" alt="">
-                        </div>
-                        <div class="profile">
-                            <img src="assets/bg3.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
-                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
-                                asperiores
-                                fugiat dignissimos quod commodi. At!
-                            </p>
-                        </div>
-                        <div class="dot">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <h4>Eugene Anokye</h4>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="quote">
-                            <img src="assets/quote.png" alt="">
-                        </div>
-                        <div class="profile">
-                            <img src="assets/b1.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
-                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
-                                asperiores
-                                fugiat dignissimos quod commodi. At!
-                            </p>
-                        </div>
-                        <div class="dot">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <h4>Eugene Anokye</h4>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="quote">
-                            <img src="assets/quote.png" alt="">
-                        </div>
-                        <div class="profile">
-                            <img src="assets/bg2.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
-                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
-                                asperiores
-                                fugiat dignissimos quod commodi. At!
-                            </p>
-                        </div>
-                        <div class="dot">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <h4>Eugene Anokye</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
     <!---------------------- EXPERTS ------------------------------>
     <section class="experts">
         <div class="title">
@@ -613,6 +505,88 @@
             </div>
         </div>
     </section>
+
+        <!---------------------- TESTIMONIALS ------------------------------>
+        <section class="testimonial">
+        <div class="container testimonial-container">
+            <div class="swiper mySwiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="quote">
+                            <img src="assets/quote.png" alt="">
+                        </div>
+                        <div class="profile">
+                            <img src="assets/bg3.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
+                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
+                                asperiores
+                                fugiat dignissimos quod commodi. At!
+                            </p>
+                        </div>
+                        <div class="dot">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <h4>Eugene Anokye</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="quote">
+                            <img src="assets/quote.png" alt="">
+                        </div>
+                        <div class="profile">
+                            <img src="assets/b1.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
+                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
+                                asperiores
+                                fugiat dignissimos quod commodi. At!
+                            </p>
+                        </div>
+                        <div class="dot">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <h4>Eugene Anokye</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="quote">
+                            <img src="assets/quote.png" alt="">
+                        </div>
+                        <div class="profile">
+                            <img src="assets/bg2.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
+                                nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
+                                asperiores
+                                fugiat dignissimos quod commodi. At!
+                            </p>
+                        </div>
+                        <div class="dot">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <h4>Eugene Anokye</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    
     <!---------------------- BLOG ------------------------------>
     <section class="blog" id="blog">
         <div class="title">
@@ -734,55 +708,18 @@
         </div>
     </section>
 
+
     <!---------------------- FOOTER ------------------------------>
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="box">
-                <a href="#home" class="logo">
-                    <img src="assets/logo.png" alt="">
-                </a>
-                <p>Offers luxurious organic hair care that transforms your hair's health and vitality.</p>
-            </div>
-            <div class="box">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms & conditions</a></li>
-                    <li><a href="">Bookings</a></li>
-                    <li><a href="">Discounts</a></li>
-                </ul>
-            </div>
-            <div class="box">
-                <h4>Newsletter</h4>
-                <p>Stay up to date with our latest products, news and discounts</p>
-                <form action="" class="newsletter">
-                    <input type="email" name="nemail" id="nemail" placeholder="Enter Email">
-                    <button type="submit" class="btn"><span class="lnr lnr-arrow-right"></span></button>
-                </form>
-            </div>
-            <div class="box">
-                <h4>Follow us</h4>
-                <p>Follow us on all social media platforms.</p>
-                <div class="social">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-snapchat"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include "footer.php"; ?>
 
     <div class="copyright">
         <p>copyright &copy; 2024 All rights reserved</p>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
