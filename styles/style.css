@@ -4,7 +4,11 @@
 }
 
 .home .slide1{
+<<<<<<< HEAD:styles/style.css
     background-image: url(../assets/bg4.jpg);
+=======
+    background-image: url(./assets/bg4.jpg);
+>>>>>>> a1518a3198d9054216754dc0f6658ed6f31c9a36:style.css
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -768,4 +772,10 @@
         align-items: center;
     }
 
+<<<<<<< HEAD:styles/style.css
+=======
+    .footer-container .logo img{
+        width: 400px;
+    }
+>>>>>>> a1518a3198d9054216754dc0f6658ed6f31c9a36:style.css
 }
