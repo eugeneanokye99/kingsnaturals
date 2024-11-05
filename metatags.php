@@ -6,8 +6,8 @@ $page_description = isset($page_description) ? $page_description : "Discover Kin
 $page_keywords = isset($page_keywords) ? $page_keywords : "hair products, natural hair care, hair growth, shampoos, conditioners, styling products, Kings Naturals";
 // $page_url = isset($page_url) ? $page_url : "https://www.kingsnaturals.com";
 // $page_image = isset($page_image) ? $page_image : "https://www.kingsnaturals.com/assets/logo.png";
-$page_url = isset($page_url) ? $page_url : "http://localhost/kingsnaturals";
-$page_image = isset($page_image) ? $page_image : "http://localhost/kingsnaturals/assets/logo.png";
+$page_url = isset($page_url) ? $page_url : "http://192.168.100.106/kingsnaturals";
+$page_image = isset($page_image) ? $page_image : "http://192.168.100.106/kingsnaturals/assets/logo.png";
 
 // Open Graph (OG) Tags for Social Media
 $og_title = $page_title;
@@ -54,15 +54,15 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 <meta name="twitter:site" content="<?php echo htmlspecialchars($twitter_site); ?>">
 
 <!-- Favicon -->
-<link rel="icon" href="http://localhost/kingsnaturals/assets/logo.png" type="image/x-icon">
-<link rel="shortcut icon" href="http://localhost/kingsnaturals/assets/logo.png" type="image/x-icon">
+<link rel="icon" href="http://192.168.100.106/kingsnaturals/assets/logo.png" type="image/x-icon">
+<link rel="shortcut icon" href="http://192.168.100.106/kingsnaturals/assets/logo.png" type="image/x-icon">
 
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="http://localhost/kingsnaturals/styles/index.css">
+<link rel="stylesheet" href="http://192.168.100.106/kingsnaturals/styles/index.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
@@ -70,4 +70,4 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 <!-- JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="http://localhost/kingsnaturals/javascript/config.js"></script>
+<script src="http://192.168.100.106/kingsnaturals/javascript/config.js"></script>

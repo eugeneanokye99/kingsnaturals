@@ -25,11 +25,7 @@
                     <div class="swiper-slide slide1">
                         <div class="content">
                             <h1>Ghana's best hair product</h1>
-<<<<<<< HEAD:index.php
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptatem eligendi maiores vero repudiandae et, inventore similique cumque ducimus eos.
-=======
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi consequuntur expedita fuga commodi eos ipsam repudiandae facere nam reprehenderit! Tempore?
->>>>>>> a1518a3198d9054216754dc0f6658ed6f31c9a36:index.html
                             </p>
                             <form action="" class="home-search">
                                 <input type="text" name="search" id="" placeholder="Search here">

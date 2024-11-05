@@ -1,0 +1,7 @@
+Array
+(
+    [action] => userRequest
+    [userRequest] => login
+    [email] => R+PrMLlpEVFzXEFy9eed1awT9odX+FpwflsSodletaY=
+    [pass] => ppbktnHbRHDll0osPbQPRA==
+)

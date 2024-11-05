@@ -101,7 +101,13 @@ class User
             // Check if the device is recognized
             if ($this->checkDevice($mysqli, $user['id'], $currentDeviceInfo)) {
                 // Device is recognized, proceed with login
-                setcookie('uid', $user['id'], time() + (86400 * 7), '/');
+                setcookie('uid', $user['id'], [
+                    'expires' => time() + (86400 * 7),
+                    'path' => '/',
+                    'httponly' => true,
+                    'secure' => true, // Requires HTTPS
+                    'samesite' => 'Strict'
+                ]);                
                 echo json_encode(['status' => 'success', 'message' => 'Login successful']);
             } else {
                 // Device not recognized, initiate 2FA
@@ -137,7 +143,6 @@ class User
 
     public function sendTwoFACode($email, $code)
     {
-        require 'PHPMailer/PHPMailerAutoload.php';
 
         $mail = new PHPMailer;
         $mail->isSMTP();
@@ -156,7 +161,8 @@ class User
         $mail->Body    = 'Your 2FA code is: ' . $code;
 
         if (!$mail->send()) {
-            echo json_encode(['status' => 'error', 'message' => '2FA code could not be sent.']);
+            error_log('Mailer Error: ' . $mail->ErrorInfo);
+            echo json_encode(['status' => 'error', 'message' => '2FA code could not be sent']);
         }
     }
 

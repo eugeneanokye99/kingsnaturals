@@ -400,7 +400,7 @@ class Functions
 
     public function getUserByEmail($mysqli, $email)
     {
-        $stmt = $mysqli->prepare("SELECT id FROM users WHERE email = ?");
+        $stmt = $mysqli->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->bind_param("s", $email); 
 
         $stmt->execute();

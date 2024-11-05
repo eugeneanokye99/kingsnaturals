@@ -21,6 +21,7 @@ const phone_error   = document.getElementById("phone_error_message");
 const pass_error    = document.getElementById("password_error_message");
 const lemail_error  = document.getElementById("logemail_error_message");
 const lpass_error   = document.getElementById("logpassword_error_message");
+const verification  = document.getElementById("verifyForm");
 
 
 
@@ -372,6 +373,9 @@ if(regForm || loginForm){
           .then((res) => {
             if (res.message === "Please verify your identity. A 2FA code has been sent to your email") {
               showPopUp("Please verify your identity. A 2FA code has been sent to your email", "red");
+              window.location.href = "verify.php";
+            } else if (res.message === "2FA code could not be sent") {
+              showPopUp("2FA code could not be sent, check your internet connection", "red");
             } else if (res.message === "Invalid credentials") {
                 showPopUp("Invalid credentials, please try again", "red");
               } else if (res.message === "Login successful") {
@@ -385,5 +389,54 @@ if(regForm || loginForm){
       }
 
     });
+  }
+}
+
+
+
+
+
+
+
+
+if(verification){
+  // Function to move to the next input box
+  function moveToNext(current, nextId) {
+    if (current.value.length === 1 && nextId) {
+        document.getElementById(nextId).focus();
+    }
+  }
+
+  function submitCode() {
+      let code = '';
+      for (let i = 1; i <= 6; i++) {
+          code += document.getElementById('box' + i).value;
+      }
+      if (code.length === 6) {
+        var verification_code = encryptData(code);
+          
+        fetch("../includes/requests.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `action=userRequest&userRequest=verify&code=${encodeURIComponent(verification_code)}`,
+        })
+          .then((response) => response.json())
+          .then((res) => {
+            if (res.message === "Please verify your identity. A 2FA code has been sent to your email") {
+              showPopUp("Please verify your identity. A 2FA code has been sent to your email", "red");
+              window.location.href = "verify.php";
+            } else if (res.message === "2FA code could not be sent") {
+              showPopUp("2FA code could not be sent, check your internet connection", "red");
+            } else if (res.message === "Invalid credentials") {
+                showPopUp("Invalid credentials, please try again", "red");
+              } else if (res.message === "Login successful") {
+                showPopUp("Login successful", "green");
+                window.location.href = "../index.php";
+              }
+          })
+          .catch((error) => console.error("Error:", error));
+      } else {
+          showPopUp("Please complete the verification code.", "red");
+      }
   }
 }
