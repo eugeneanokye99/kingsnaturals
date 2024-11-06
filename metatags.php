@@ -53,16 +53,19 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 <meta name="twitter:image" content="<?php echo htmlspecialchars($twitter_image); ?>">
 <meta name="twitter:site" content="<?php echo htmlspecialchars($twitter_site); ?>">
 
+<!-- PHP -->
+<?php include "AppConfig.php"; ?>
+
 <!-- Favicon -->
-<link rel="icon" href="http://localhost/kingsnaturals/assets/logo.png" type="image/x-icon">
-<link rel="shortcut icon" href="http://localhost/kingsnaturals/assets/logo.png" type="image/x-icon">
+<link rel="icon" href="<?php echo LOGO_IMAGE ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo LOGO_IMAGE ?>" type="image/x-icon">
 
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="http://localhost/kingsnaturals/styles/index.css">
+<link rel="stylesheet" href="<?php echo INDEX_CSS ?>">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
@@ -70,4 +73,6 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 <!-- JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="http://localhost/kingsnaturals/javascript/config.js"></script>
+<script src="<?php echo CONFIG_JS ?>"></script>
+
+
