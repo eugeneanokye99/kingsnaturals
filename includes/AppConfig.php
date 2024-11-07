@@ -52,6 +52,7 @@ define('INDEX_CSS', CSS_BASE_URL . '/index.css');
 
 // JavaScript files
 define('CONFIG_JS', JS_BASE_URL . '/config.js');
+define('REQUEST_JS', JS_BASE_URL . '/request.js');
 
 
 // Example of fonts
