@@ -62,17 +62,17 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="./assets/libraries/css/linearicons.css">
+<link rel="stylesheet" href="./assets/libraries/css/swiper.css" />
+<link rel="stylesheet" href="./assets/libraries/css/fontawesome.css">
 <link rel="stylesheet" href="<?php echo INDEX_CSS ?>">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/libraries/css/toastify.css">
 
 
 
 <!-- JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./assets/libraries/js/crypto.js"></script>
+<script type="text/javascript" src="./assets/libraries/js/toastify.js"></script>
 <script src="<?php echo CONFIG_JS ?>"></script>
 
 
