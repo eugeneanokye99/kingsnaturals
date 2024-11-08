@@ -255,6 +255,20 @@ if(regForm || loginForm){
       }
     }
 
+    function check_confirm_password() {
+      var password = regpass.value;
+      var confirm_password = confirm_password.value;
+      if (password !== confirm_password) {
+         document.getElementById('confirm_password_error_message').innerHTML = 'Passwords Did not Match';
+         document.getElementById('confirm_password_error_message').style.display = 'block';
+         confirm_password.style.borderBottom = '2px solid #F90A0A';
+         error_confirm_password = true;
+      } else {
+         document.getElementById('confirm_password_error_message').style.display = 'none';
+         confirm_password.style.borderBottom = '2px solid #34F458';
+      }
+   }
+
     regForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
