@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-2">
-                    <img src="../assets/logo.png" alt="image" width="100%">
+                    <img src="<?php echo LOGO_IMAGE; ?>" alt="image" width="100%">
                 </div>
 
                 <div class="col-2">
@@ -89,8 +89,7 @@
     </div>
 
 
-
-    <script src="../javascript/script.js"></script>
+    <?php include "includes/js_files.php"; ?>
 </body>
 
 </html>

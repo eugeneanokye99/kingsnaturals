@@ -4,11 +4,7 @@
 }
 
 .home .slide1{
-<<<<<<< HEAD:styles/style.css
-    background-image: url(../assets/bg4.jpg);
-=======
-    background-image: url(./assets/bg4.jpg);
->>>>>>> a1518a3198d9054216754dc0f6658ed6f31c9a36:style.css
+    background-image: url(../assets/images/bg4.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -16,7 +12,7 @@
 }
 
 .home .slide2{
-    background-image: url(../assets/woman.jpg);
+    background-image: url(../assets/images/woman.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -24,7 +20,7 @@
 }
 
 .home .slide3{
-    background-image: url(../assets/b1.jpg);
+    background-image: url(../assets/images/b1.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -32,7 +28,7 @@
 }
 
 .home .slide4{
-    background-image: url(../assets/bg3.jpg);
+    background-image: url(../assets/images/bg3.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -138,7 +134,7 @@
     width: 100%;
     top: -3rem;
     right: -9rem;
-    background: url(../assets/dots.png) no-repeat;
+    background: url(../assets/images/dots.png) no-repeat;
 }
 
 .about-container{
@@ -147,7 +143,7 @@
 }
 
 .about-container .left{
-    background: url(../assets/KN\ 8.jpg);
+    background: url(../assets/images/KN\ 8.jpg);
     max-height: 100vh;
     width: 100%;
     background-position: center;
@@ -278,7 +274,7 @@
 /*-------------------------- SHOP ----------------------------*/
 
 .shop{
-    background: url('../assets/section1.png');
+    background: url('../assets/images/section1.png');
     margin-top: 3rem;
     padding: 3rem 0;
 }
@@ -772,10 +768,7 @@
         align-items: center;
     }
 
-<<<<<<< HEAD:styles/style.css
-=======
     .footer-container .logo img{
         width: 400px;
     }
->>>>>>> a1518a3198d9054216754dc0f6658ed6f31c9a36:style.css
 }

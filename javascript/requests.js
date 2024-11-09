@@ -1,7 +1,4 @@
-// request.js
-import { AppConfig } from './config.js';
-
-export class AppRequests {
+export default class AppRequests {
   constructor(config) {
     this.config = config;
   }
@@ -15,16 +12,14 @@ export class AppRequests {
     });
 
     try {
-      const response = await fetch(`${this.config.apiUrl}/register`, {
+      const response = await fetch(`${this.config.apiUrl}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body,
       });
       const data = await response.json();
-      console.log('User registration response:', data);
       return data;
     } catch (error) {
-      console.error('Error registering user:', error);
       throw error;
     }
   }
@@ -38,16 +33,35 @@ export class AppRequests {
     });
 
     try {
-      const response = await fetch(`${this.config.apiUrl}/login`, {
+      const response = await fetch(`${this.config.apiUrl}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body,
       });
       const data = await response.json();
-      console.log('User login response:', data);
       return data;
     } catch (error) {
-      console.error('Error logging in user:', error);
+      throw error;
+    }
+  }
+
+  // Method to send user varification data to the server
+  async verifyUser(verificationData) {
+    const body = JSON.stringify({
+      action: 'userRequest',
+      userRequest: 'verify',
+      ...verificationData,
+    });
+
+    try {
+      const response = await fetch(`${this.config.apiUrl}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+      });
+      const data = await response.json();
+      return data;
+    } catch (error) {
       throw error;
     }
   }
@@ -63,7 +77,7 @@ export class AppRequests {
     });
 
     try {
-      const response = await fetch(`${this.config.apiUrl}/request.php`, {
+      const response = await fetch(`${this.config.apiUrl}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body,

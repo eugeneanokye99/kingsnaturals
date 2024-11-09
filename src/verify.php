@@ -21,7 +21,7 @@
                     <input type="text" maxlength="1" class="input-box" oninput="moveToNext(this, 'box6')" id="box5" inputmode="numeric" pattern="\d*">
                     <input type="text" maxlength="1" class="input-box" id="box6" oninput="moveToNext(this, null)" inputmode="numeric" pattern="\d*">
                 </div>
-                <button type="button" class="submit-btn" onclick="submitCode()">Verify</button>
+                <button type="button" class="submit-btn">Verify</button>
             </form>
         </div>
     </section>
@@ -33,6 +33,6 @@
         <p>copyright &copy; 2024 All rights reserved</p>
     </div>
 
-    <script src="../javascript/script.js"></script>
+    <?php include "includes/js_files.php"; ?>
 </body>
 </html>

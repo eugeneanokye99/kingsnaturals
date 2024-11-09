@@ -1,9 +1,11 @@
-// config.js
+import AppRequests from './requests.js';
+
 export default class AppConfig {
   constructor(encryptionKey, iv) {
       this.encryptionKey = CryptoJS.enc.Utf8.parse(encryptionKey);
       this.iv = CryptoJS.enc.Utf8.parse(iv);
       this.user_id = this.getCookie('uid');
+      this.apiUrl = 'http://localhost/kingsnaturals/includes/requests.php';
   }
 
   getCookie(cname) {
@@ -52,4 +54,30 @@ export default class AppConfig {
           inputValue.style.borderBottom = `2px solid ${invalidStyle}`;
       }
   }
+
+  startTrackingLocation(user_id) {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(
+            (position) => {
+                const { latitude, longitude } = position.coords;
+                console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+                
+                // Send the location to the server or process it as needed
+                const requests = new AppRequests(this);
+                requests.sendLocationToServer(user_id, latitude, longitude);
+            },
+            (error) => {
+                console.error("Error obtaining location: ", error);
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+        );
+    } else {
+        console.error("Geolocation is not supported by this browser.");
+    }
+  }
+  
 }

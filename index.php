@@ -1,8 +1,8 @@
 <?php
-    if (!isset($_COOKIE['uid'])) {
-        header("Location: src/register.php");
-        exit();
-    }
+    // if (!isset($_COOKIE['uid'])) {
+    //     header("Location: src/register.php");
+    //     exit();
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +92,7 @@
             </div>
             <div class="right">
                 <div class="image">
-                    <img src="assets/IMG-20241002-WA0009.jpg" alt="Kings Olive image">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/IMG-20241002-WA0009.jpg" alt="Kings Olive image">
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
         </div>
         <div class="container services-container">
             <div class="col">
-                <img src="assets/b1.jpg" alt="services1">
+                <img src="<?php echo IMAGE_BASE_URL; ?>/b1.jpg" alt="services1">
                 <div class="info">
                     <h4>Daily Makeup</h4>
                     <ul>
@@ -125,10 +125,10 @@
                     </ul>
                     <a href="">Book Service</a>
                 </div>
-                <img src="assets/bg2.jpg" alt="">
+                <img src="<?php echo IMAGE_BASE_URL; ?>/bg2.jpg" alt="">
             </div>
             <div class="col">
-                <img src="assets/bg3.jpg" alt="">
+                <img src="<?php echo IMAGE_BASE_URL; ?>/bg3.jpg" alt="">
                 <div class="info">
                     <h4>Daily Makeup</h4>
                     <ul>
@@ -147,7 +147,7 @@
                     </ul>
                     <a href="">Book Service</a>
                 </div>
-                <img src="assets/b1.jpg" alt="">
+                <img src="<?php echo IMAGE_BASE_URL; ?>/b1.jpg" alt="">
             </div>
         </div>
     </section>
@@ -165,7 +165,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/olive.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/olive.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -182,7 +182,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/kings.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/kings.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -199,7 +199,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/coconut_oil.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/coconut_oil.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -216,7 +216,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/pack.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/pack.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -233,7 +233,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/olive.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/olive.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -250,7 +250,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/kings.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/kings.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -267,7 +267,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/coconut_oil.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/coconut_oil.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -284,7 +284,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/pack.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/pack.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -301,7 +301,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/olive.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/olive.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -318,7 +318,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/kings.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/kings.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -335,7 +335,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/coconut_oil.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/coconut_oil.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -352,7 +352,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/pack.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/pack.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -369,7 +369,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/olive.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/olive.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -386,7 +386,7 @@
                     <div class="swiper-slide">
                         <div class="box">
                             <div class="image">
-                                <img src="assets/kings.png" alt="">
+                                <img src="<?php echo IMAGE_BASE_URL; ?>/kings.png" alt="">
                                 <div class="add">
                                     <span class="lnr lnr-cart"></span>
                                     <span class="lnr lnr-heart"></span>
@@ -413,7 +413,7 @@
         <div class="container experts-container">
             <div class="box">
                 <div class="image">
-                    <img src="assets/bg2.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/bg2.jpg" alt="">
                     <div class="social">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
@@ -436,7 +436,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/bg3.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/bg3.jpg" alt="">
                     <div class="social">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
@@ -459,7 +459,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/b1.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/b1.jpg" alt="">
                     <div class="social">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
@@ -482,7 +482,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/bg3.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/bg3.jpg" alt="">
                     <div class="social">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
@@ -513,10 +513,10 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="quote">
-                            <img src="assets/quote.png" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/quote.png" alt="">
                         </div>
                         <div class="profile">
-                            <img src="assets/bg3.jpg" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/bg3.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
                                 nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
                                 asperiores
@@ -536,10 +536,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="quote">
-                            <img src="assets/quote.png" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/quote.png" alt="">
                         </div>
                         <div class="profile">
-                            <img src="assets/b1.jpg" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/b1.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
                                 nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
                                 asperiores
@@ -559,10 +559,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="quote">
-                            <img src="assets/quote.png" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/quote.png" alt="">
                         </div>
                         <div class="profile">
-                            <img src="assets/bg2.jpg" alt="">
+                            <img src="<?php echo IMAGE_BASE_URL; ?>/bg2.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ea repellat numquam
                                 nihil voluptas error aut, ipsum illum libero incidunt, esse quas dolores neque
                                 asperiores
@@ -595,7 +595,7 @@
         <div class="container blog-container">
             <div class="box">
                 <div class="image">
-                    <img src="assets/KN 10.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/KN 10.jpg" alt="">
                     <div class="tag">
                         <span>20</span>
                         <s>JUN</s>
@@ -615,7 +615,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/KN 11.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/KN 11.jpg" alt="">
                     <div class="tag">
                         <span>20</span>
                         <s>JUN</s>
@@ -635,7 +635,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/KN 8.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/KN 8.jpg" alt="">
                     <div class="tag">
                         <span>20</span>
                         <s>JUN</s>
@@ -655,7 +655,7 @@
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="assets/KN 9.jpg" alt="">
+                    <img src="<?php echo IMAGE_BASE_URL; ?>/KN 9.jpg" alt="">
                     <div class="tag">
                         <span>20</span>
                         <s>JUN</s>
@@ -716,10 +716,8 @@
         <p>copyright &copy; 2024 All rights reserved</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="javascript/script.js"></script>
+
+    <?php include "src/includes/js_files.php"; ?>
 </body>
 
 </html>

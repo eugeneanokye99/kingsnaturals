@@ -418,12 +418,7 @@ class Functions
     public function getDeviceInfo() {
         return [
             'current_user_os' => $this->OS(),
-            'current_user_browser' => $this->Browser(),
             'current_user_device' => $this->isMobile() ? 'Mobile' : ($this->isTablet() ? 'Tablet' : 'Desktop'),
-            'current_ip_address' => $this->IP(),
-            'current_mac_address' => $this->getUserMAC(),
-            'current_public_ip'     => $this->getPublicIP(),
-            'current_user_browser_version' => $this->BrowserVersion(),
             'current_user_isp'              => $this->ISP(),
             'current_user_hostname'        => $this->Hostname(),
         ];

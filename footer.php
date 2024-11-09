@@ -2,7 +2,7 @@
         <div class="container footer-container">
             <div class="box">
                 <a href="#home" class="logo">
-                    <img src="http://localhost/kingsnaturals/assets/logo.png" alt="">
+                    <img src="<?php echo LOGO_IMAGE; ?>" alt="">
                 </a>
                 <p>Offers luxurious organic hair care that transforms your hair's health and vitality.</p>
             </div>

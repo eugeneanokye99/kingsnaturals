@@ -54,7 +54,7 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 <meta name="twitter:site" content="<?php echo htmlspecialchars($twitter_site); ?>">
 
 <!-- PHP -->
-<?php include "AppConfig.php"; ?>
+<?php include "includes/path_definitions.php"; ?>
 
 <!-- Favicon -->
 <link rel="icon" href="<?php echo LOGO_IMAGE ?>" type="image/x-icon">
@@ -62,17 +62,16 @@ $twitter_site = "@KingsNaturals"; // Replace with your Twitter handle
 
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="./assets/libraries/css/linearicons.css">
-<link rel="stylesheet" href="./assets/libraries/css/swiper.css" />
-<link rel="stylesheet" href="./assets/libraries/css/fontawesome.css">
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/linearicons.css">
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/swiper.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/fontawesome.css">
 <link rel="stylesheet" href="<?php echo INDEX_CSS ?>">
-<link rel="stylesheet" type="text/css" href="./assets/libraries/css/toastify.css">
+<link rel="stylesheet" type="text/css" href="<?php echo LIB_CSS ?>/toastify.css">
 
 
 
 <!-- JavaScript -->
-<script src="./assets/libraries/js/crypto.js"></script>
-<script type="text/javascript" src="./assets/libraries/js/toastify.js"></script>
-<script src="<?php echo CONFIG_JS ?>"></script>
+<script src="<?php echo LIB_JS ?>/crypto.js"></script>
+<script type="text/javascript" src="<?php echo LIB_JS ?>/toastify.js"></script>
 
 

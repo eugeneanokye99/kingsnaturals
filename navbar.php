@@ -1,5 +1,6 @@
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
+$show_login_signup = !isset($_COOKIE['uid']);
 ?>
 
 <nav>
@@ -15,7 +16,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li><a href="<?php echo ($current_page == 'index.php') ? '#shop' : '../index.php#shop'; ?>">shop</a></li>
             <li><a href="<?php echo ($current_page == 'index.php') ? '#blog' : '../index.php#blog'; ?>">blog</a></li>
             <li><a href="<?php echo ($current_page == 'index.php') ? '#contact' : '../index.php#contact'; ?>">contact</a></li>
-            <li><a href="src/register.php">Login/Signup</a></li>
+            <?php if ($show_login_signup): ?>
+                <li><a href="src/register.php">Login/Signup</a></li>
+            <?php endif; ?>
         </ul>
         <div class="nav-icons">
             <div class="menu-btn">

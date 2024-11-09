@@ -117,7 +117,7 @@ class User
                 // Store 2FA code in session or database temporarily for verification
                 $_SESSION['twofa_code'] = $twoFACode;
                 $_SESSION['twofa_user'] = $user['id'];
-                echo json_encode(['status' => '2fa_required', 'message' => 'Please verify your identity. A 2FA code has been sent to your email.']);
+                echo json_encode(['status' => '2fa_required', 'message' => 'Please verify your identity. A 2FA code has been sent to your email']);
             }
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Invalid credentials']);
@@ -185,9 +185,9 @@ class User
             unset($_SESSION['twofa_code']);
             unset($_SESSION['twofa_user']);
 
-            echo json_encode(['status' => 'success', 'message' => '2FA verification successful.']);
+            echo json_encode(['status' => 'success', 'message' => '2FA verification successful']);
         } else {
-            echo json_encode(['status' => 'error', 'message' => 'Invalid 2FA code.']);
+            echo json_encode(['status' => 'error', 'message' => 'Invalid 2FA code']);
         }
     }
 
