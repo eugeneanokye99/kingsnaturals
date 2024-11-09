@@ -417,10 +417,10 @@ class Functions
 
     public function getDeviceInfo() {
         return [
-            'current_user_os' => $this->OS(),
-            'current_user_device' => $this->isMobile() ? 'Mobile' : ($this->isTablet() ? 'Tablet' : 'Desktop'),
-            'current_user_isp'              => $this->ISP(),
-            'current_user_hostname'        => $this->Hostname(),
+            'user_os' => $this->OS(),
+            'user_device' => $this->isMobile() ? 'Mobile' : ($this->isTablet() ? 'Tablet' : 'Desktop'),
+            'ISP'              => $this->ISP(),
+            'hostname'        => $this->Hostname(),
         ];
     }
     

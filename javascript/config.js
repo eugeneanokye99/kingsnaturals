@@ -5,7 +5,12 @@ export default class AppConfig {
       this.encryptionKey = CryptoJS.enc.Utf8.parse(encryptionKey);
       this.iv = CryptoJS.enc.Utf8.parse(iv);
       this.user_id = this.getCookie('uid');
-      this.apiUrl = 'http://localhost/kingsnaturals/includes/requests.php';
+    let ipAddress = '172.20.10.4';
+    let localhostUrl = `http://localhost/kingsnaturals/includes/requests.php`;
+    let networkUrl = `http://${ipAddress}/kingsnaturals/includes/requests.php`;
+    
+    this.apiUrl = window.location.hostname === 'localhost' ? localhostUrl : networkUrl;
+    
   }
 
   getCookie(cname) {
@@ -45,13 +50,15 @@ export default class AppConfig {
   }
 
   validateInput(pattern, inputValue, errorElement, errorMessage, validStyle = "#34F458", invalidStyle = "#F90A0A") {
-      if (pattern.test(inputValue) && inputValue !== "") {
+      if (pattern.test(inputValue.value) && inputValue.value !== "") {
           errorElement.style.display = "none";
           inputValue.style.borderBottom = `2px solid ${validStyle}`;
+          return true;
       } else {
           errorElement.innerText = errorMessage;
           errorElement.style.display = "block";
           inputValue.style.borderBottom = `2px solid ${invalidStyle}`;
+          return false;
       }
   }
 

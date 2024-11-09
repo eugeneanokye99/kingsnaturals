@@ -6,14 +6,14 @@ License: https://linearicons.com/free/license
 */
 @font-face {
   font-family: Linearicons-Free;
-  src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
-  src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot?#iefix)
+  src: url(../webfonts/Linearicons-Free.eot);
+  src: url(../webfonts/Linearicons-Free_1.eot)
       format("embedded-opentype"),
-    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff2)
+    url(../webfonts/Linearicons-Free.woff2)
       format("woff2"),
-    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.ttf)
+    url(../webfonts/Linearicons-Free.ttf)
       format("truetype"),
-    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff)
+    url(../webfonts/Linearicons-Free.woff)
       format("woff"),
     url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.svg#Linearicons-Free)
       format("svg");

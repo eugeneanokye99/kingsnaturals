@@ -66,7 +66,27 @@ export default class AppRequests {
     }
   }
 
-  // Example method for sending location data
+  async sendCode(user_email) {
+    const body = JSON.stringify({
+      action: 'userRequest',
+      userRequest: 'send2FA',
+      ...user_email,
+    });
+
+    try {
+      const response = await fetch(`${this.config.apiUrl}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+      });
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // method for sending location data
   async sendLocationToServer(latitude, longitude) {
     const body = JSON.stringify({
       action: 'userRequest',

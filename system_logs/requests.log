@@ -1,37 +1,4 @@
-2024-11-09 00:45:58 - Login request received: Array
-(
-    [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => rXHKStBFNsYAc7I2+7/69bhwtdF11H0dT9A/yy4ZX7A=
-    [pass] => ppbktnHbRHDll0osPbQPRA==
-)
-
-2024-11-09 00:47:01 - Login request received: Array
-(
-    [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => rXHKStBFNsYAc7I2+7/69bhwtdF11H0dT9A/yy4ZX7A=
-    [pass] => ppbktnHbRHDll0osPbQPRA==
-)
-
-2024-11-09 00:47:01 - yawanoke99@gmail.com hello100
-2024-11-09 00:48:55 - Login request received: Array
-(
-    [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => rXHKStBFNsYAc7I2+7/69bhwtdF11H0dT9A/yy4ZX7A=
-    [pass] => Dp8pzi9Xtry3On3SXBwT1w==
-)
-
-2024-11-09 00:49:00 - Login request received: Array
-(
-    [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => rXHKStBFNsYAc7I2+7/69bhwtdF11H0dT9A/yy4ZX7A=
-    [pass] => FKG1wKSvG5YAeEwg4mXeyQ==
-)
-
-2024-11-09 00:50:28 - Login request received: Array
+2024-11-09 17:27:38 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
@@ -39,7 +6,7 @@
     [pass] => ppbktnHbRHDll0osPbQPRA==
 )
 
-2024-11-09 00:50:31 - Login request received: Array
+2024-11-09 17:47:02 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
@@ -47,7 +14,7 @@
     [pass] => ppbktnHbRHDll0osPbQPRA==
 )
 
-2024-11-09 00:52:46 - Login request received: Array
+2024-11-09 17:54:44 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
@@ -55,7 +22,7 @@
     [pass] => ppbktnHbRHDll0osPbQPRA==
 )
 
-2024-11-09 00:53:40 - Login request received: Array
+2024-11-09 17:55:17 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
@@ -63,7 +30,7 @@
     [pass] => ppbktnHbRHDll0osPbQPRA==
 )
 
-2024-11-09 01:17:29 - Login request received: Array
+2024-11-09 17:56:41 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login

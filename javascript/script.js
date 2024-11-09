@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const regemail         = document.getElementById("email");
     const regphone         = document.getElementById("phone");
     const regpass          = document.getElementById("password");
+    const confirmPass      = document.getElementById("confirm_password")
     const logemail         = document.getElementById("logemail");
     const logpass          = document.getElementById("logpassword");
     const name_error       = document.getElementById("name_error_message");
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email_error      = document.getElementById("email_error_message");
     const phone_error      = document.getElementById("phone_error_message");
     const pass_error       = document.getElementById("password_error_message");
+    const cpass_error      = document.getElementById("confirm_password_error_message");
     const lemail_error     = document.getElementById("logemail_error_message");
     const lpass_error      = document.getElementById("logpassword_error_message");
     const emailPattern     = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -37,13 +39,28 @@ document.addEventListener("DOMContentLoaded", () => {
         registrationForm.addEventListener("submit", async (event) => {
             event.preventDefault();
 
-            const isNameValid    = config.validateInput(namePattern, regname, name_error, "Please enter a valid email address");
-            const isUsernameValid = config.validateInput(usernamePattern, regusername, uname_error, "Password must be at least 6 characters");
-            const isPhoneValid = config.validateInput(phonePattern, regphone, phone_error, "Password must be at least 6 characters");
+            const isNameValid     = config.validateInput(namePattern, regname, name_error, "Should contain only Characters");
+            const isUsernameValid = config.validateInput(usernamePattern, regusername, uname_error, "Username should contain only letters, numbers, underscores, hyphens, or dots");
+            const isPhoneValid    = config.validateInput(phonePattern, regphone, phone_error, "Should contain only numbers");
             const isEmailValid    = config.validateInput(emailPattern, regemail, email_error, "Please enter a valid email address");
             const isPasswordValid = config.validateInput(passwordPattern, regpass, pass_error, "Password must be at least 6 characters");
 
+            // Check if confirm password matches password
+            const isConfirmPasswordValid = regpass.value === confirmPass.value;
+            if (isConfirmPasswordValid) {
+                cpass_error.style.display = "none";
+                confirmPass.style.borderBottom = "2px solid #34F458";
+            } else {
+                cpass_error.innerText = "Passwords do not match";
+                cpass_error.style.display = "block";
+                confirmPass.style.borderBottom = "2px solid #F90A0A";
+            }
 
+            // Stop form submission if any validation fails
+            if (!isNameValid || !isUsernameValid || !isPhoneValid || !isEmailValid || !isPasswordValid || !isConfirmPasswordValid) {
+                config.showPopUp("Validation failed!", "red");
+                return;
+            }
 
             // Get input values
             var fullname      = config.encryptData(regname.value);
@@ -54,6 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
             var width         = screen.width;
             var height        = screen.height;
 
+            document.querySelector(".loader").style.display = "inline-block";
+            document.querySelector(".btn").style.display = "none";
+
             // Create user data object
             const userData = { fullname, username, email_address, phone, pass, width, height };
 
@@ -62,13 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const response = await request.registerUser(userData);
                 if (response === "User already exists") {
                     config.showPopUp("User already exists", "red");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
                   } else if (response === "Registration failed") {
                     config.showPopUp("Registration failed", "red");
-                  } else if (response === "Registration successful") {
-                    config.showPopUp("Registration successful", "green");
                     setTimeout(() => {
-                        window.location.href = "../index.php";
+                        window.location.reload();
                     }, 1500);
+                  } else if (response === "Registration successful") {
+                    config.showPopUp("Registration successful, please Log in", "green");
                   }
            
             } catch (error) {
@@ -95,6 +118,10 @@ document.addEventListener("DOMContentLoaded", () => {
             var emailAddress = config.encryptData(logemail.value);
             var pass         = config.encryptData(logpass.value);
 
+            document.querySelector(".loader").style.display = "inline-block";
+            document.querySelector(".btn").style.display = "none";
+            document.querySelector(".fp").style.display = "none";
+
             // Create login data object
             const loginData = { emailAddress, pass };
 
@@ -103,13 +130,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const response = await request.loginUser(loginData);
                 if (response.message === "Please verify your identity. A 2FA code has been sent to your email") {
                     config.showPopUp("Please verify your identity. A 2FA code has been sent to your email", "red");
-                    setTimeout(() => {
-                        window.location.href = "verify.php";
-                    }, 1500);
-                } else if (response.message === "2FA code could not be sent") {
-                    showPopUp("2FA code could not be sent, check your internet connection", "red");
+                    sendTwoFACode(emailAddress);
                 } else if (response.message === "Invalid credentials") {
-                     config.showPopUp("Invalid credentials, please try again", "red");
+                    config.showPopUp("Invalid credentials, please try again", "red");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
                 } else if (response.message === "Login successful") {
                     config.showPopUp("Login successful", "green");
                     setTimeout(() => {
@@ -120,6 +146,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Login error:", error);
             }
         });
+
+
+        async function sendTwoFACode(email) {
+            let user_email = { email };
+
+            try{
+                const response = await request.sendCode(user_email);
+
+                if (response.message === "2FA code could not be sent") {
+                    config.showPopUp("2FA code could not be sent, please check your internet connection", "red");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
+                } else if (response.message === "2FA sent") {
+                    config.showPopUp("Code has been sent to your email", "green");
+                    setTimeout(() => {
+                        window.location.href = "verify.php";
+                    }, 1500);
+                } 
+            } catch (error) {
+                console.log("2FA error:", error)
+            }
+        }
     }
 
 
@@ -136,17 +185,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 
               const verificationData = { verification_code };
 
+              document.querySelector(".loader").style.display = "inline-block";
+              document.querySelector(".submit-btn").style.display = "none";
+
               try {
                   // Send data to server
                   const response = await request.verifyUser(verificationData);
                   if (response.message === "2FA verification successful") {
-                      config.showPopUp("2FA verification successful, Login again", "red");
+                      config.showPopUp("2FA verification successful, Login again", "green");
                       setTimeout(() => {
                         window.location.href = "register.php";
                     }, 1500);
                   } else if (response.message === "Invalid 2FA code") {
-                      showPopUp("Invalid 2FA code", "red");
-                  } 
+                    showPopUp("Invalid 2FA code", "red");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
+                  } else if (response.message == "User data file not found") {
+                    showPopUp("User data file not found", "red");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
+                  }
               } catch (error) {
                   console.error("Verification error:", error);
               }

@@ -8,11 +8,26 @@ ini_set('display_errors', FALSE);
 ini_set('log_errors', TRUE);
 ini_set('error_log', '../system_logs/errorlogs.txt');
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// Handle OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    // Indicate allowed methods and headers for preflight requests
+    header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    http_response_code(200);
+    exit(0); // End the request
+}
+
+
 $allowed_actions = array(
     'userRequest',
 );
 
 $input = json_decode(file_get_contents('php://input'), true);
+
 
 
 // $req_dump = print_r($input, TRUE);
@@ -69,10 +84,19 @@ if (isset($input['action']) && in_array($input['action'], $allowed_actions)) {
             log_messages("Verification request received: " . print_r($input, true));
 
             
-            $code      = $encrypt->decryptData($input['longitude']);
-            $userId     = $encrypt->decryptUserId($input['userId']);
+            $code      = $encrypt->decryptData($input['verification_code']);
 
             $User->verifyTwoFACode($mysqli, $userId, $code, json_encode($functions->getDeviceInfo()));
+        }
+        else if ($input['userRequest'] == 'send2FA'){
+
+            log_messages("2FA request received: " . print_r($input, true));
+
+            
+            $email      = $encrypt->decryptData($input['email']);
+            $twoFACode = rand(100000, 999999); 
+
+            $User->sendTwoFACode($mysqli, $email, $twoFACode);
         }
     }
 }

@@ -22,6 +22,7 @@
                     <input type="text" maxlength="1" class="input-box" id="box6" oninput="moveToNext(this, null)" inputmode="numeric" pattern="\d*">
                 </div>
                 <button type="button" class="submit-btn">Verify</button>
+                <div class="loader"></div>
             </form>
         </div>
     </section>

@@ -43,7 +43,7 @@
                                 </div>
                             <button type="submit" class="btn">Login</button>
                             <div class="loader"></div>
-                            <a href="">Forgot Password</a>
+                            <a href="" class="fp">Forgot Password</a>
                         </form>
 
                         <form id="registration-form">
