@@ -1,8 +1,8 @@
 <?php
-    // if (!isset($_COOKIE['uid'])) {
-    //     header("Location: src/register.php");
-    //     exit();
-    // }
+    if (!isset($_COOKIE['uid'])) {
+        header("Location: src/register.php");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

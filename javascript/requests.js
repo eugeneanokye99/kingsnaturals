@@ -110,4 +110,50 @@ export default class AppRequests {
       throw error;
     }
   }
+
+  // method for retrieving user data
+  async getUserDetails() {
+    const body = JSON.stringify({
+      action: 'userRequest',
+      userRequest: 'user_details',
+      userId: this.config.userId,
+    });
+
+    try {
+      const response = await fetch(`${this.config.apiUrl}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+      });
+      const data = await response.json();
+      console.log('User data retrieved successfully:', data);
+      return data;
+    } catch (error) {
+      console.error('Error retrieving user data:', error);
+      throw error;
+    }
+  }
+
+
+  // method for sending location data
+  async getProducts() {
+    const body = JSON.stringify({
+      action: 'userRequest',
+      userRequest: 'getProducts',
+    });
+
+    try {
+      const response = await fetch(`${this.config.apiUrl}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+      });
+      const data = await response.json();
+      console.log('Product data retrieved successfully:', data);
+      return data;
+    } catch (error) {
+      console.error('Error retrieving product data:', error);
+      throw error;
+    }
+  }
 }
