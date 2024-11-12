@@ -62,7 +62,7 @@ export default class AppConfig {
       }
   }
 
-  startTrackingLocation(user_id) {
+  startTrackingLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
             (position) => {
@@ -71,7 +71,7 @@ export default class AppConfig {
                 
                 // Send the location to the server or process it as needed
                 const requests = new AppRequests(this);
-                requests.sendLocationToServer(user_id, latitude, longitude);
+                requests.sendLocationToServer(this.user_id, latitude, longitude);
             },
             (error) => {
                 console.error("Error obtaining location: ", error);
@@ -86,5 +86,6 @@ export default class AppConfig {
         console.error("Geolocation is not supported by this browser.");
     }
   }
+
   
 }

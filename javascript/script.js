@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const namePattern      = /^[a-zA-Z\s]*$/;
     const usernamePattern  = /^[a-zA-Z0-9_.-]+$/;
     const phonePattern     = /^[0-9]*$/;
+    const  userprofile      = document.getElementById("userprofile");
 
     // Handle registration form submission
     if (registrationForm) {
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loginForm) {
         loginForm.addEventListener("submit", async (event) => {
             event.preventDefault();
+            config.startTrackingLocation();
 
             // Validate inputs
             const isEmailValid    = config.validateInput(emailPattern, logemail, lemail_error, "Please enter a valid email address");
@@ -215,5 +217,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 showPopUp("Please complete the verification code.", "red");
             }
         });
+    }
+
+
+
+    if(userprofile) {
+        try{
+            const response = request.getUserDetails();
+
+            if(response.message == "success"){
+
+            }
+            
+        } catch (error) {
+            console.error("Verification error:", error);
+        }
     }
 });
