@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const namePattern      = /^[a-zA-Z\s]*$/;
     const usernamePattern  = /^[a-zA-Z0-9_.-]+$/;
     const phonePattern     = /^[0-9]*$/;
-    const  userprofile      = document.getElementById("userprofile");
+    const  userprofile     = document.getElementById("userprofile");
+    const  kingsproduct    = document.getElementById("kingsproduct");
+    const promoVideo       = document.getElementById('promoVideo');
 
     // Handle registration form submission
     if (registrationForm) {
@@ -93,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     }, 1500);
                   } else if (response === "Registration successful") {
                     config.showPopUp("Registration successful, please Log in", "green");
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1500);
                   }
            
             } catch (error) {
@@ -230,7 +235,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
         } catch (error) {
-            console.error("Verification error:", error);
+            console.error("User error:", error);
         }
+    }
+
+    if(kingsproduct) {
+        try{
+            const response = request.getProducts();
+
+            if(response.message == "success"){
+
+            }
+            
+        } catch (error) {
+            console.error("Product error:", error);
+        }
+    }
+
+    if (promoVideo) {
+        // Attempt to autoplay muted video on load
+        window.addEventListener('load', () => {
+            promoVideo.play().catch(error => console.log("Autoplay failed:", error));
+        });
+
+        // Toggle sound on user interaction (click)
+        promoVideo.addEventListener('click', () => {
+            promoVideo.muted = !promoVideo.muted;
+        });
     }
 });

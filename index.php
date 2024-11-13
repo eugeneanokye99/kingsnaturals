@@ -1,9 +1,3 @@
-<?php
-    if (!isset($_COOKIE['uid'])) {
-        header("Location: src/register.php");
-        exit();
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,6 +63,27 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!---------------------- PROMO ------------------------------>
+    <section class="promo" id="promo">
+        <div class="title">
+            <h2>Promo</h2>
+        </div>
+        <div class="container promo-container">
+            <div class="left">
+                <div class="title">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aperiam est, velit sapiente quis recusandae enim eligendi molestias maiores mollitia sit harum magnam tempora minus!</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="video">
+                    <video id="promoVideo" src="<?php echo PROMO_VIDEO ?>" autoplay muted></video>
+                </div>
             </div>
         </div>
     </section>

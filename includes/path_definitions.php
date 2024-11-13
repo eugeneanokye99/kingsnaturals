@@ -22,7 +22,7 @@
 
     // Video paths
     define('INTRO_VIDEO', VIDEO_BASE_URL . '/intro.mp4');
-    define('PROMO_VIDEO', VIDEO_BASE_URL . '/promo.mp4');
+    define('PROMO_VIDEO', VIDEO_BASE_URL . '/kings.mp4');
 
     // CSS files
     define('INDEX_CSS', CSS_BASE_URL . '/index.css');

@@ -1,36 +1,53 @@
-2024-11-09 17:27:38 - Login request received: Array
+2024-11-13 21:48:42 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
-    [emailAddress] => 8qsjzUQpNz9jRVaP2ziZJuurltk34EHUcw+9CFNLj/s=
-    [pass] => ppbktnHbRHDll0osPbQPRA==
+    [emailAddress] => R+PrMLlpEVFzXEFy9eed1awT9odX+FpwflsSodletaY=
+    [pass] => kfgz4O/bikKccFdOkWQhhA==
 )
 
-2024-11-09 17:47:02 - Login request received: Array
+2024-11-13 21:51:47 - Register request received: Array
+(
+    [action] => userRequest
+    [userRequest] => register
+    [fullname] => 7fnPwQmMXmu3RhpoiukMUw==
+    [username] => 2SaumgfIK7Mx0Z9y5f655w==
+    [email_address] => jYOCg+B82rSIC3HxO0dZu7DcCccl7yig2USz+KR/nU8=
+    [phone] => 2SaumgfIK7Mx0Z9y5f655w==
+    [pass] => 4yK0xDxlmT5Z07VGgIdkYQ==
+    [width] => 375
+    [height] => 812
+)
+
+2024-11-13 22:15:52 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login
-    [emailAddress] => 8qsjzUQpNz9jRVaP2ziZJuurltk34EHUcw+9CFNLj/s=
-    [pass] => ppbktnHbRHDll0osPbQPRA==
+    [emailAddress] => R+PrMLlpEVFzXEFy9eed1awT9odX+FpwflsSodletaY=
+    [pass] => kfgz4O/bikKccFdOkWQhhA==
 )
 
-2024-11-09 17:54:44 - Login request received: Array
+2024-11-13 22:15:52 - 2FA request received: Array
 (
     [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => 8qsjzUQpNz9jRVaP2ziZJuurltk34EHUcw+9CFNLj/s=
-    [pass] => ppbktnHbRHDll0osPbQPRA==
+    [userRequest] => send2FA
+    [email] => R+PrMLlpEVFzXEFy9eed1awT9odX+FpwflsSodletaY=
 )
 
-2024-11-09 17:55:17 - Login request received: Array
+2024-11-13 22:16:24 - Register request received: Array
 (
     [action] => userRequest
-    [userRequest] => login
-    [emailAddress] => 8qsjzUQpNz9jRVaP2ziZJuurltk34EHUcw+9CFNLj/s=
+    [userRequest] => register
+    [fullname] => RDvku5UroSFY+hgLS4Ibtw==
+    [username] => o3c6Oz/rvk58KkBpO6eouw==
+    [email_address] => 8qsjzUQpNz9jRVaP2ziZJuurltk34EHUcw+9CFNLj/s=
+    [phone] => XSvStz50RkldQ1w7fnBtMA==
     [pass] => ppbktnHbRHDll0osPbQPRA==
+    [width] => 1366
+    [height] => 768
 )
 
-2024-11-09 17:56:41 - Login request received: Array
+2024-11-13 22:16:37 - Login request received: Array
 (
     [action] => userRequest
     [userRequest] => login

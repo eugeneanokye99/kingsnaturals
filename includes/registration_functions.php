@@ -158,7 +158,7 @@ class User
         return false; // Device not recognized
     }
     
-    public function sendTwoFACode($email, $name = "User", $code)
+    public function sendTwoFACode($email, $name , $code)
     {
         $mail = new PHPMailer;
         $mail->isSMTP();

@@ -95,8 +95,9 @@ if (isset($input['action']) && in_array($input['action'], $allowed_actions)) {
             
             $email      = $encrypt->decryptData($input['email']);
             $twoFACode = rand(100000, 999999); 
+            $name      = "User";
 
-            $User->sendTwoFACode($mysqli, $email, $twoFACode);
+            $User->sendTwoFACode($email, $name, $twoFACode);
         }
     }
 }
