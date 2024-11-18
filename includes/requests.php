@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 $allowed_actions = array(
     'userRequest',
+    'productRequest',
+    'adminRequest',
 );
 
 $input = json_decode(file_get_contents('php://input'), true);
@@ -98,6 +100,25 @@ if (isset($input['action']) && in_array($input['action'], $allowed_actions)) {
             $name      = "User";
 
             $User->sendTwoFACode($email, $name, $twoFACode);
+        }
+        else if ($input['userRequest'] == 'user_details'){
+
+            $userId     = $encrypt->decryptUserId($input['userId']);
+
+            $User->getUserDetails($mysqli, $userId);
+        }
+    }
+
+
+    else if($action == 'adminRequest'){
+        
+    }
+
+
+    else if($action == 'productRequest'){
+        if ($input['productRequest'] == 'getProducts') {
+
+            $User->getProducts($mysqli);
         }
     }
 }

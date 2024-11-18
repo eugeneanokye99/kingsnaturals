@@ -253,14 +253,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (promoVideo) {
-        // Attempt to autoplay muted video on load
-        window.addEventListener('load', () => {
-            promoVideo.play().catch(error => console.log("Autoplay failed:", error));
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function () {
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+            }
         });
 
-        // Toggle sound on user interaction (click)
-        promoVideo.addEventListener('click', () => {
-            promoVideo.muted = !promoVideo.muted;
+        promoVideo.addEventListener('suspend', () => {
+            // suspend invoked
+            promoVideo.play();
         });
+
+
+        document.querySelector('body').addEventListener('click touchstart', function () {
+            if (promoVideo.playing) {
+                // video is already playing so do nothing
+            }
+            else {
+                // video is not playing
+                // so play video now
+                promoVideo.play();
+            }
+    });
     }
 });
