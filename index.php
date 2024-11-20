@@ -82,7 +82,9 @@
             </div>
             <div class="right">
                 <div class="video">
-                    <video id="promoVideo" src="<?php echo PROMO_VIDEO ?>" autoplay muted loop ></video>
+                    <video id="promoVideo"  autoplay muted playsinline loop>
+                        <source src="<?php echo PROMO_VIDEO ?>" type="video/mp4"/>
+                    </video>
                 </div>
             </div>
         </div>

@@ -28,8 +28,9 @@ $FILE_PATH = __DIR__ . '/';
 
  
 include_once($FILE_PATH . 'encryption_functions.php');
-include_once($FILE_PATH . 'registration_functions.php');
+include_once($FILE_PATH . 'user_functions.php');
 include_once($FILE_PATH . 'generalfunctions.php');
+include_once($FILE_PATH . 'admin_functions.php');
 
 
 
@@ -39,6 +40,7 @@ include_once($FILE_PATH . 'generalfunctions.php');
 $encrypt         = new Encrypt();
 $User            = new User();
 $functions       = new Functions();
+$admin           = new Admin();
 
 
 

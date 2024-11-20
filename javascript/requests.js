@@ -138,7 +138,7 @@ export default class AppRequests {
   // method for sending location data
   async getProducts() {
     const body = JSON.stringify({
-      action: 'userRequest',
+      action: 'productRequest',
       userRequest: 'getProducts',
     });
 
