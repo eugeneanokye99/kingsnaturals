@@ -82,7 +82,7 @@
             </div>
             <div class="right">
                 <div class="video">
-                    <video id="promoVideo" src="<?php echo PROMO_VIDEO ?>" autoplay muted></video>
+                    <video id="promoVideo" src="<?php echo PROMO_VIDEO ?>" autoplay muted loop ></video>
                 </div>
             </div>
         </div>
