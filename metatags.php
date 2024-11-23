@@ -6,8 +6,8 @@ $page_description = isset($page_description) ? $page_description : "Discover Kin
 $page_keywords = isset($page_keywords) ? $page_keywords : "hair products, natural hair care, hair growth, shampoos, conditioners, styling products, Kings Naturals";
 // $page_url = isset($page_url) ? $page_url : "https://www.kingsnaturals.com";
 // $page_image = isset($page_image) ? $page_image : "https://www.kingsnaturals.com/assets/logo.png";
-$page_url = isset($page_url) ? $page_url : "http://192.168.100.106/kingsnaturals";
-$page_image = isset($page_image) ? $page_image : "http://192.168.100.106/kingsnaturals/assets/logo.png";
+$page_url = isset($page_url) ? $page_url : "http://localhost/kingsnaturals";
+$page_image = isset($page_image) ? $page_image : "http://localhost/kingsnaturals/assets/logo.png";
 
 // Open Graph (OG) Tags for Social Media
 $og_title = $page_title;
