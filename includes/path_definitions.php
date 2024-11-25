@@ -26,10 +26,13 @@
 
     // CSS files
     define('INDEX_CSS', CSS_BASE_URL . '/index.css');
+    define('ADMIN_CSS', CSS_BASE_URL . '/admin.css');
+
 
     // JavaScript files
     define('APP_JS', JS_BASE_URL . '/App.js');
     define('SCRIPT_JS', JS_BASE_URL . '/script.js');
+    define('ADMIN_JS', JS_BASE_URL . '/admin.js');
 
 
     // libraries

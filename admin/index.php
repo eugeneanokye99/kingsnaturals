@@ -174,7 +174,7 @@
                 <a href="#">Show All</a>
               </div>
               <div class="d-flex align-items-center border-bottom py-3">
-                <img src="img/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
+                <img src="<?php echo IMAGE_BASE_URL ?>/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
                 <div class="w-100 ms-3">
                   <div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-0">Rachel Amoako</h6>
@@ -184,7 +184,7 @@
                 </div>
               </div>
               <div class="d-flex align-items-center border-bottom py-3">
-                <img src="img/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
+                <img src="<?php echo IMAGE_BASE_URL ?>/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
                 <div class="w-100 ms-3">
                   <div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-0">Rachel Amoako</h6>
@@ -194,7 +194,7 @@
                 </div>
               </div>
               <div class="d-flex align-items-center border-bottom py-3">
-                <img src="img/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
+                <img src="<?php echo IMAGE_BASE_URL ?>/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
                 <div class="w-100 ms-3">
                   <div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-0">Rachel Amoako</h6>
@@ -204,7 +204,7 @@
                 </div>
               </div>
               <div class="d-flex align-items-center border-bottom py-3">
-                <img src="img/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
+                <img src="<?php echo IMAGE_BASE_URL ?>/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
                 <div class="w-100 ms-3">
                   <div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-0">Rachel Amoako</h6>
@@ -214,7 +214,7 @@
                 </div>
               </div>
               <div class="d-flex align-items-center border-bottom py-3">
-                <img src="img/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
+                <img src="<?php echo IMAGE_BASE_URL ?>/user.jpg" alt="" class="rounded-circle flex-shrink-0" style="width: 40px; height: 40px;">
                 <div class="w-100 ms-3">
                   <div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-0">Rachel Amoako</h6>
@@ -311,8 +311,5 @@
 
 
     <?php include "javascript.php"; ?>
-
-    <!-- Template JavaScript -->
-    <script src="script.js"></script>
   </body>
 </html>

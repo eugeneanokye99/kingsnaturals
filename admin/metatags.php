@@ -21,10 +21,10 @@ $admin_image = isset($admin_image) ? $admin_image : "http://localhost/kingsnatur
 <meta name="author" content="Kings Naturals Admin Team">
 
 <!-- Security -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="deny">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block"> -->
 
 <!-- Compatibility -->
 <meta name="theme-color" content="#ed1616"> <!-- Admin Panel Theme -->
@@ -39,32 +39,26 @@ $admin_image = isset($admin_image) ? $admin_image : "http://localhost/kingsnatur
 <meta property="og:url" content="<?php echo htmlspecialchars($admin_url); ?>">
 <meta property="og:image" content="<?php echo htmlspecialchars($admin_image); ?>">
 
+<!-- PHP -->
+<?php include "../includes/path_definitions.php"; ?>
+
 <!-- Favicon -->
-<link rel="icon" href="<?php echo $admin_image ?>" type="image/x-icon">
-<link rel="shortcut icon" href="<?php echo $admin_image ?>" type="image/x-icon">
+<link rel="icon" href="<?php echo LOGO_IMAGE ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo LOGO_IMAGE ?>" type="image/x-icon">
 
 <!-- Stylesheets -->
 
-<!-- Google Web fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" />
-
 <!-- Icon Font StyleSheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/all.min.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/bootstrap-icons.css" />
 
 <!-- Library Stylesheet -->
-<link rel="stylesheet" href="owl.carousel.min.css" />
-<link rel="stylesheet" href="tempusdominus-bootstrap-4.min.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/owl.carousel.min.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/tempusdominus-bootstrap-4.min.css" />
 
 <!-- Customized Bootstrap Stylesheet -->
-<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="<?php echo LIB_CSS ?>/bootstrap.min.css" />
 
-<!-- Templat Stylesheet -->
-<link rel="stylesheet" href="style.css" />
+<!-- Template Stylesheet -->
+<link rel="stylesheet" href="<?php echo ADMIN_CSS ?>" />
 
-
-
-<!-- JavaScript -->
-<script src="/admin/scripts/admin.js"></script>
