@@ -24,7 +24,7 @@
       <div class="container-fluid pt-4 px-4">
         <div class="bg-white text-center rounded p-4">
           <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Manage Users</h6>
+            <h6 class="mb-0">Our Products</h6>
             <a href="#">Show All</a>
           </div>
           <div class="table-responsive">
@@ -33,9 +33,9 @@
                 <tr class="text-dark">
                   <th scope="col"><input type="checkbox" name="" id="" class="form-check-input"></th>
                   <th scope="col">Date</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Phone Number</th>
+                  <th scope="col">Prodcut Name</th>
+                  <th scope="col">Product Price</th>
+                  <th scope="col">Quantity</th>
                   <th scope="col">Status</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -83,7 +83,7 @@
                   <td>Eugene Anokye</td>
                   <td>yawanokye99@gmail.com</td>
                   <td>0599012817</td>
-                  <td>In Stock</td>
+                  <td>Active</td>
                   <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
                 </tr>
                 <tr>
@@ -92,7 +92,7 @@
                   <td>Eugene Anokye</td>
                   <td>yawanokye99@gmail.com</td>
                   <td>0599012817</td>
-                  <td>Out of Stock</td>
+                  <td>Active</td>
                   <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
                 </tr>
                 <tr>

@@ -20,6 +20,96 @@
       <?php include "includes/navbar.php"; ?>
 
 
+      <!-- Manage User Start -->
+      <div class="container-fluid pt-4 px-4">
+        <div class="bg-white text-center rounded p-4">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Manage Users</h6>
+            <a href="#">Show All</a>
+          </div>
+          <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+              <thead>
+                <tr class="text-dark">
+                  <th scope="col"><input type="checkbox" name="" id="" class="form-check-input"></th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Invoice</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Payment Mode</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Returned</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Pending</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Delivered</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Active</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Active</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Active</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id="" class="form-check-input"></td>
+                  <td>14th April, 2024</td>
+                  <td>Eugene Anokye</td>
+                  <td>yawanokye99@gmail.com</td>
+                  <td>0599012817</td>
+                  <td>Active</td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
       <!-- Footer Start -->
       <?php include "includes/footer.php"; ?>
 

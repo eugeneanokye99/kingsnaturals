@@ -25,24 +25,23 @@
                 </a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="add_user.php" class="dropdown-item">Add Users</a>
-                    <a href="manage_user.php" class="dropdown-item">Manage Users Users</a>
+                    <a href="manage_user.php" class="dropdown-item">Manage Users</a>
                 </div>
             </div>
-            <a href="product.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Product</a>
-            <a href="orders.php" class="nav-item nav-link"><i class="fa fa-shopping-cart me-2"></i>Orders</a>
-            <a href="payment.php" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>Payment</a>
-
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                     <i class="far fa-file-alt me-2"></i>
-                    Pages
+                    Products
                 </a>
 
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="signin.php" class="dropdown-item">Sign In</a>
-                    <a href="signup.php" class="dropdown-item">Sign Up</a>
+                    <a href="add_product.php" class="dropdown-item">Add Products</a>
+                    <a href="manage_product.php" class="dropdown-item">Manage Products</a>
                 </div>
             </div>
+            <a href="orders.php" class="nav-item nav-link"><i class="fa fa-shopping-cart me-2"></i>Orders</a>
+            <a href="payment.php" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>Payment</a>
+
         </div>
     </nav>
 </div>
